@@ -2,8 +2,8 @@
 
 namespace Application.Services.Managers.Interfaces
 {
-    public interface IDepartmentManager
+    public interface IProjectManager
     {
-        Task<IEnumerable<Department>> GetAllDepartmentAsync();
+        Task<IEnumerable<Project>> GetAllProjectAsync();
     }
 }
