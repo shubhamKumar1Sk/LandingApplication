@@ -4,6 +4,7 @@ namespace Application.Services.Repositories.Interfaces
 {
     public interface IEmployeeRepository
     {
-        Task<IEnumerable<Employee>> GetAllDepartments();
+        Task<List<Employee>> GetAllEmployees();
+        Task<int> AddEmployee(Employee request);
     }
 }

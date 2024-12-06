@@ -1,9 +1,11 @@
 ﻿using Application.Services.Models.Entities;
+using Application.Services.Models.RequestDTO;
 
 namespace Application.Services.Managers.Interfaces
 {
     public interface IEmployeeManager
     {
-        Task<IEnumerable<Employee>> GetAllEmployeesAsync();
+        Task<List<Employee>> GetAllEmployees();
+        Task<int> AddEmployee(EmployeeRequestDto request);
     }
 }

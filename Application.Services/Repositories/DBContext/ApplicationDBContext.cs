@@ -9,8 +9,8 @@ namespace Application.Services.Repositories.DBContext
         public ApplicationDBContext(DbContextOptions<ApplicationDBContext> options) : base(options) { }
 
 
-        DbSet<Project> Projects { get; set; }
-        DbSet<Department> Departments { get; set; }
-        DbSet<Employee> Employees { get; set; }
+       public DbSet<Project> Projects { get; set; }
+       public DbSet<Department> Departments { get; set; }
+       public DbSet<Employee> Employees { get; set; }
     }
 }

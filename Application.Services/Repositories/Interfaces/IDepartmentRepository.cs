@@ -4,6 +4,6 @@ namespace Application.Services.Repositories.Interfaces
 {
     public interface IDepartmentRepository
     {
-        Task<IEnumerable<Department>> GetAllDepartments();
+        //Task<IEnumerable<Department>> GetAllDepartments();
     }
 }
