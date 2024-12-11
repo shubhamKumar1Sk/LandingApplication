@@ -15,14 +15,18 @@ builder.Services.AddDbContext<ApplicationDBContext>(options =>
 builder.Services.AddTransient<ApplicationDBContext>();
 builder.Services.AddTransient<IDepartmentRepository, DepartmentRepository>();
 builder.Services.AddTransient<IEmployeeRepository, EmployeeRepository>();
+builder.Services.AddTransient<IAuthenticationRepository, AuthenticationRepository>();
 builder.Services.AddTransient<IEmployeeManager, EmployeeManager>();
 builder.Services.AddTransient<IDepartmentManager, DepartmentManager>();
+    builder.Services.AddTransient<IAuthenticationManager, AuthenticationManager>();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+app.UseCors(options => options.WithOrigins("*").AllowAnyMethod().AllowAnyHeader());
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

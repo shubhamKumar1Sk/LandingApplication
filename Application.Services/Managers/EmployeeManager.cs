@@ -24,6 +24,7 @@ namespace Application.Services.Managers
             {
                 FirstName = request.FirstName,
                 LastName = request.LastName,
+                Email = request.Email,
                 PhoneNO = request.PhoneNO,
                 // Email = request.Email,
                 DateOfBirth = request.DateOfBirth,

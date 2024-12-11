@@ -21,5 +21,8 @@
         public Department Department { get; set; }
         public int DepartmentId {get; set; }
         public ICollection<Project> Projects { get; set; }
+        public string? Email { get; set; }
+        public string? Password { get; set; }
+
     }
 }
